@@ -11,9 +11,9 @@ AnagramFinder.prototype.findAnagrams = function (otherWords) {
         // if check_word and split_word are the same length then good
         if (check_word.length === this.split_word.length) {
             // if otherWord is not this.word
-            if (otherWord !== this.word) {
+            if (this.word !== otherWord) {
                 return check_word.every((letter) => {
-                    return this.word.includes(letter)
+                    return this.split_word.includes(letter)
                 })
             }
         }
